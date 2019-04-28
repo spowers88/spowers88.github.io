@@ -4,7 +4,7 @@ nav {
   justify-content: center;
   background-color: var(--blue);
   border-bottom: 1px solid #0066ff;
-  box-shadow: 0 3px 5px var(--black);
+  box-shadow: 0 1px 4px var(--black);
 }
 
 .navLink {
