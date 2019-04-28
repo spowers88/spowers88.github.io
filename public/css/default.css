@@ -1,5 +1,5 @@
 nav {
   display: flex;
   justify-content: center;
-  background-color: --blue;
+  background-color: var(--blue);
 }
