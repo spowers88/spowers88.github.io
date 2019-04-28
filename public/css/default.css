@@ -3,3 +3,17 @@ nav {
   justify-content: center;
   background-color: var(--blue);
 }
+
+.navLink {
+  color: var(--white);
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.navLink:visited {
+  text-decoration: none;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
