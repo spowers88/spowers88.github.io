@@ -3,7 +3,7 @@ nav {
   display: flex;
   justify-content: center;
   background-color: var(--blue);
-  border-bottom: 1px solid #cce0ff;
+  border-bottom: 1px solid #0066ff;
   box-shadow: 0 3px 5px var(--black);
 }
 
