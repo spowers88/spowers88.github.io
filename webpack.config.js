@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
   entry: './static/js/index.js',
@@ -21,6 +22,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
+    new WriteFilePlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
