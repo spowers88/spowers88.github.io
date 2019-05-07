@@ -1,6 +1,11 @@
+// Framework
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-ReactDOM.render(<div>Test</div>, document.getElementById('app'));
+// Pages
+import Home from '../pages/home';
+import Algorithms from '../pages/algorithms';
+
+ReactDOM.render(<Home />, document.getElementById('app'));
 
 module.hot.accept();
