@@ -771,7 +771,7 @@
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getDefault() { return module['navigation.css']; } :
 /******/ 			function getModuleExports() { return module; };
 /******/ 		__webpack_require__.d(getter, 'a', getter);
 /******/ 		return getter;

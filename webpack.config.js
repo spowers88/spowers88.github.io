@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const WriteFilePlugin = require('write-file-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './static/js/index.js',
@@ -10,6 +10,14 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      },
+      {
+        test: /\.(less)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader' },
+          { loader: 'less-loader' }
+        ],
       }
     ]
   },
@@ -17,12 +25,12 @@ module.exports = {
     extensions: ['*', '.js', '.jsx']
   },
   output: {
-    path: path.join(__dirname, './'),
+    path: path.join(__dirname, '/dist'),
     publicPath: '/',
     filename: 'bundle.js'
   },
   plugins: [
-    new WriteFilePlugin(),
+    new MiniCssExtractPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
