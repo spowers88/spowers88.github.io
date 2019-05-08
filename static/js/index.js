@@ -1,5 +1,5 @@
 // Framework
-import { render } from "/web_modules/preact";
+import { render } from "/web_modules/preact.js";
 
 // Pages
 import Home from '../pages/home';
