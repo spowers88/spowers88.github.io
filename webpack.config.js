@@ -1,16 +1,10 @@
 const path = require('path');
-const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: './static/js/index.js',
+  entry: './static/js',
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader']
-      },
       {
         test: /\.(less)$/,
         use: [
@@ -21,20 +15,14 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    extensions: ['*', '.js', '.jsx']
-  },
   output: {
-    path: path.join(__dirname, '/dist'),
-    publicPath: '/',
-    filename: 'bundle.js'
+    path: path.join(__dirname, '/'),
+    publicPath: '/'
   },
   plugins: [
-    new MiniCssExtractPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new MiniCssExtractPlugin()
   ],
   devServer: {
-    contentBase: './',
-    hot: true
+    contentBase: './'
   }
 };
