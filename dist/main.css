@@ -1,3 +1,17 @@
+.pageHeader {
+  margin: 20px 0 0 20px;
+  padding: 20px;
+}
+.pageHeader .header {
+  padding: 0 0 15px 0;
+  font-size: 30px;
+  line-height: 36px;
+}
+.pageHeader .description {
+  font-size: 20px;
+  line-height: 24px;
+}
+
 .nav {
   padding: var(--lrg-space) 0;
   display: flex;
