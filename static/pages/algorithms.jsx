@@ -1,16 +1,16 @@
 // Framework
-import { h, Component, Fragment } from "../../dist/web_modules/preact";
+import React from 'react';
 
 // Components
 import Navigation from '../components/navigation/navigation';
 
-class Algorithms extends Component {
+class Algorithms extends React.Component {
   render() {
     return (
-      <Fragment>
+      <React.Fragment>
         <Navigation/>
         <h2>Algorithms</h2>
-      </Fragment>
+      </React.Fragment>
     );
   }
 }

@@ -1,8 +1,11 @@
 // Framework
-import { h, render } from "../../dist/web_modules/preact";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 // Pages
 import Home from '../pages/home';
 import Algorithms from '../pages/algorithms';
 
-render(<Home />, document.body);
+ReactDOM.render(<Home />, document.getElementById('app'));
+
+module.hot.accept();

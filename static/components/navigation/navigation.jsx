@@ -1,15 +1,15 @@
 // Framework
-import { h, Component } from "../../dist/web_modules/preact";
+import React from 'react';
 
 // Styles
 import './navigation.less'
 
-class Navigation extends Component {
+class Navigation extends React.Component {
   render() {
     return (
       <nav className="nav">
         <a className="navLink" href="/">Home</a>
-        <a className="navLink" href="/static/pages/algorithms.html">Algorithms</a>
+        <a className="navLink">Algorithms</a>
       </nav>
     );
   }
