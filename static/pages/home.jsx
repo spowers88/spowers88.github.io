@@ -1,16 +1,16 @@
 // Framework
-import React from 'react';
+import { Component, Fragment } from "/web_modules/preact";
 
 // Components
 import Navigation from '../components/navigation/navigation';
 
-class Home extends React.Component {
+class Home extends Component {
   render() {
     return (
-      <React.Fragment>
+      <Fragment>
         <Navigation/>
         <h2>Home</h2>
-      </React.Fragment>
+      </Fragment>
     );
   }
 }

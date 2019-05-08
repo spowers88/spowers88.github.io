@@ -1,8 +1,10 @@
-import React from 'react';
+// Framework
+import { Component } from "/web_modules/preact";
 
+// Styles
 import './navigation.less'
 
-class Navigation extends React.Component {
+class Navigation extends Component {
   render() {
     return (
       <nav className="nav">
