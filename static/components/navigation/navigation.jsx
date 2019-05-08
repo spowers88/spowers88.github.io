@@ -1,5 +1,5 @@
 // Framework
-import { h, Component } from "/web_modules/preact";
+import { h, Component } from "../../dist/web_modules/preact";
 
 // Styles
 import './navigation.less'

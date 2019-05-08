@@ -1,5 +1,5 @@
 // Framework
-import { h, Component, Fragment } from "/web_modules/preact";
+import { h, Component, Fragment } from "../../dist/web_modules/preact";
 
 // Components
 import Navigation from '../components/navigation/navigation';

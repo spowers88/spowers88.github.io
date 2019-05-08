@@ -1,6 +1,6 @@
 "use strict";
 
-var _preact = require("/web_modules/preact.js");
+var _preact = require("../../dist/web_modules/preact");
 
 var _home = _interopRequireDefault(require("../pages/home"));
 

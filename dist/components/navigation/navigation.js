@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _preact = require("/web_modules/preact");
+var _preact = require("../../dist/web_modules/preact");
 
 require("./navigation.less");
 
