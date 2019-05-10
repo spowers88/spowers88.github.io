@@ -1,15 +1,41 @@
 .pageHeader {
-  margin: 20px 0 0 20px;
-  padding: 20px;
+  margin: var(--xlrg-space) 0 0 var(--xlrg-space);
+  padding: var(--xlrg-space);
 }
 .pageHeader .header {
-  padding: 0 0 15px 0;
-  font-size: 30px;
+  padding: 0 0 var(--lrg-space) 0;
+  font-size: var(--xlrg-font);
   line-height: 36px;
 }
 .pageHeader .description {
-  font-size: 20px;
+  font-size: var(--lrg-font);
   line-height: 24px;
+}
+
+.algorithm {
+  margin: 0 0 var(--lrg-space) 0;
+  padding: var(--lrg-space);
+  border: 1px solid #80bfff;
+  box-shadow: 0 0 4px var(--shadow);
+  background-color: var(--blue2);
+}
+.algorithm:last-child {
+  margin: 0;
+}
+.algorithm .description {
+  margin: 0 0 var(--med-space) 0;
+}
+.algorithm .solution {
+  margin: 0 0 var(--med-space) 0;
+  padding: var(--med-space);
+  border: 2px dashed var(--black);
+  background-color: var(--blue3);
+  white-space: pre;
+}
+.algorithm .run {
+  padding: var(--sm-space) var(--med-space);
+  border: 1px solid #e6e6e6;
+  background-color: var(--white2);
 }
 
 .nav {
@@ -20,17 +46,17 @@
   border-bottom: 1px solid #0066ff;
   box-shadow: 0 1px 4px var(--black);
 }
-.navLink {
+.nav .navLink {
   color: var(--white);
   padding: 0 var(--med-space);
   font-size: var(--lrg-font);
   line-height: 24px;
   text-decoration: none;
 }
-.navLink:visited {
+.nav .navLink:visited {
   text-decoration: none;
 }
-.navLink:hover {
+.nav .navLink:hover {
   text-decoration: underline;
 }
 
