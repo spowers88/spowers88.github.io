@@ -1,14 +1,34 @@
-.pageHeader {
+.sectionHeader {
   margin: var(--xlrg-space) 0 0 var(--xlrg-space);
   padding: var(--xlrg-space);
 }
-.pageHeader .header {
+.sectionHeader.innerHeader {
+  margin-top: 0;
+}
+.sectionHeader .header {
   padding: 0 0 var(--lrg-space) 0;
   font-size: var(--xlrg-font);
   line-height: 36px;
 }
-.pageHeader .description {
+.sectionHeader .header.noDescription {
+  padding: 0;
+}
+.sectionHeader .description {
   font-size: var(--lrg-font);
+  line-height: 24px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--black);
+}
+.project .projectImage {
+  width: 20%;
+}
+.project .projectDescription {
+  padding: var(--med-space);
+  font-size: 18px;
   line-height: 24px;
 }
 

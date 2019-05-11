@@ -1,11 +1,19 @@
-.pageHeader {
+.sectionHeader {
   // Spacing
   margin: var(--xlrg-space) 0 0 var(--xlrg-space);
   padding: var(--xlrg-space);
 
+  &.innerHeader {
+    margin-top: 0;
+  }
+
   .header {
     // Spacing
     padding: 0 0 var(--lrg-space) 0;
+
+    &.noDescription {
+      padding: 0;
+    }
 
     // Font
     font-size: var(--xlrg-font);
