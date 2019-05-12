@@ -22,7 +22,9 @@ class Algorithm extends React.Component {
     return (
       <section className="algorithm">
         <p className="description">{description}</p>
-        <p className="solution">{solution}</p>
+        <pre className="solution">
+          <code>{solution}</code>
+        </pre>
         <button
           onClick={this.handleRunSolution}
           className="run"

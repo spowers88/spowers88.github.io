@@ -19,3 +19,83 @@
     line-height: 24px;
   }
 }
+
+.workImages {
+  //Position
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  .logoLink {
+    // Position
+    flex: 0 1 30%;
+    position: relative;
+
+    //Spacing
+    margin: var(--med-space);
+
+    &:hover {
+      // Style
+      cursor: pointer;
+
+      .view {
+        // Position
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .imageWrapper {
+      // Position
+      display: flex;
+      align-items: center;
+
+      // Size
+      height: 50px;
+    }
+    .cbsLogo {
+      // Size
+      width: 100%;
+      max-height: 50px;
+    }
+    .rocketLawyerLogo {
+      // Size
+      width: 100%;
+      max-height: 50px;
+    }
+    .nerdwalletLogo {
+      // Size
+      width: 100%;
+      max-height: 50px;
+    }
+    .brightwheelLogo {
+      // Size
+      width: 100%;
+      max-height: 50px;
+    }
+    .view {
+      // Position
+      top: 0;
+      display: none;
+      position: absolute;
+      vertical-align: middle;
+
+      // Size
+      width: 100%;
+      min-height: 50px;
+
+      // Spacing
+      padding: 0 0 0 var(--med-space);
+
+      // Font
+      color: var(--white);
+      font-size: var(--xlrg-font);
+      line-height: 36px;
+
+      // Style {
+      opacity: 0.9;
+      background-color: var(--black);
+    }
+  }
+}

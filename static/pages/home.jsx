@@ -5,7 +5,33 @@ import SectionHeader from "../components/sectionHeader/sectionHeader";
 import './home.less';
 
 class Home extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      selectedWork: undefined
+    };
+    this.works = {
+      brightwheel: 'brightwheel',
+      nerdwallet: 'nerdwallet',
+      rocketlawyer: 'rocketlawyer',
+      cbsinteractive: 'cbsinteractive'
+    };
+
+    this.selectAWork = this.selectAWork.bind(this);
+  }
+
+  selectAWork(work) {
+    const { state } = this.state;
+
+    this.setState({
+      selectedWork: this.works[work]
+    })
+  }
+
   render() {
+    const { selectedWork } = this.state;
+
     return (
       <React.Fragment>
         <SectionHeader
@@ -29,8 +55,40 @@ class Home extends React.Component {
           </section>
         </section>
         <section className="section">
-          <SectionHeader title="Work history" innerHeader />
+          <SectionHeader title="Work history (recent - oldest)" innerHeader />
           <section className="section innerSection">
+            <header className="workImages">
+              <a className="logoLink" onClick={() => {this.selectAWork(this.works.brightwheel)}}>
+                <span className="imageWrapper">
+                  <img className="brightwheelLogo" src="/static/img/brightwheel-logo.svg" alt="brightwheel logo" />
+                </span>
+                <span className="view">View</span>
+              </a>
+              <a className="logoLink" onClick={() => {this.selectAWork(this.works.nerdwallet)}}>
+                <span className="imageWrapper">
+                  <img className="nerdwalletLogo" src="/static/img/nerdwallet-logo.png" alt="nerdwallet logo" />
+                </span>
+                <span className="view">View</span>
+              </a>
+              <a className="logoLink" onClick={() => {this.selectAWork(this.works.rocketlawyer)}}>
+                <span className="imageWrapper">
+                  <img className="rocketLawyerLogo" src="/static/img/rocketlawyer-logo.png" alt="rocket lawyer logo" />
+                </span>
+                <span className="view">View</span>
+              </a>
+              <a className="logoLink" onClick={() => {this.selectAWork(this.works.cbsinteractive)}}>
+                <span className="imageWrapper">
+                  <img className="cbsLogo" src="/static/img/cbs-logo.png" alt="cbs interactive logo" />
+                </span>
+                <span className="view">View</span>
+              </a>
+            </header>
+            {
+              selectedWork &&
+              <section>
+                <p>{selectedWork}</p>
+              </section>
+            }
           </section>
         </section>
       </React.Fragment>

@@ -31,6 +31,59 @@
   font-size: 18px;
   line-height: 24px;
 }
+.workImages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.workImages .logoLink {
+  flex: 0 1 30%;
+  position: relative;
+  margin: var(--med-space);
+}
+.workImages .logoLink:hover {
+  cursor: pointer;
+}
+.workImages .logoLink:hover .view {
+  display: flex;
+  align-items: center;
+}
+.workImages .logoLink .imageWrapper {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.workImages .logoLink .cbsLogo {
+  width: 100%;
+  max-height: 50px;
+}
+.workImages .logoLink .rocketLawyerLogo {
+  width: 100%;
+  max-height: 50px;
+}
+.workImages .logoLink .nerdwalletLogo {
+  width: 100%;
+  max-height: 50px;
+}
+.workImages .logoLink .brightwheelLogo {
+  width: 100%;
+  max-height: 50px;
+}
+.workImages .logoLink .view {
+  top: 0;
+  display: none;
+  position: absolute;
+  vertical-align: middle;
+  width: 100%;
+  min-height: 50px;
+  padding: 0 0 0 var(--med-space);
+  color: var(--white);
+  font-size: var(--xlrg-font);
+  line-height: 36px;
+  opacity: 0.9;
+  background-color: var(--black);
+}
 
 .algorithm {
   margin: 0 0 var(--lrg-space) 0;
@@ -50,7 +103,6 @@
   padding: var(--med-space);
   border: 2px dashed var(--black);
   background-color: var(--blue3);
-  white-space: pre;
 }
 .algorithm .run {
   padding: var(--sm-space) var(--med-space);
