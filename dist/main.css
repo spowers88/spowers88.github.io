@@ -7,11 +7,13 @@
 }
 .sectionHeader .header {
   padding: 0 0 var(--lrg-space) 0;
+  display: inline-block;
   font-size: var(--xlrg-font);
   line-height: 36px;
 }
 .sectionHeader .header.noDescription {
   padding: 0;
+  border-bottom: 2px solid var(--blue);
 }
 .sectionHeader .description {
   font-size: var(--lrg-font);
@@ -21,7 +23,7 @@
 .project {
   display: flex;
   align-items: center;
-  border: 1px solid var(--black);
+  background-color: var(--blue3);
 }
 .project .projectImage {
   width: 20%;
@@ -35,15 +37,21 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .workImages .logoLink {
   flex: 0 1 30%;
   position: relative;
   margin: var(--med-space);
+  padding: var(--med-space);
+  border-bottom: 2px solid var(--white);
+}
+.workImages .logoLink.selected {
+  border-bottom-color: var(--blue2);
 }
 .workImages .logoLink:hover {
   cursor: pointer;
+  border-bottom-color: var(--blue2);
 }
 .workImages .logoLink:hover .view {
   display: flex;
@@ -52,37 +60,25 @@
 .workImages .logoLink .imageWrapper {
   display: flex;
   align-items: center;
-  height: 50px;
 }
-.workImages .logoLink .cbsLogo {
+.workImages .logoLink .logo {
   width: 100%;
-  max-height: 50px;
 }
-.workImages .logoLink .rocketLawyerLogo {
-  width: 100%;
-  max-height: 50px;
+.workSection {
+  margin: var(--xlrg-space) 0;
+  padding: var(--lrg-space);
+  background-color: var(--blue3);
 }
-.workImages .logoLink .nerdwalletLogo {
-  width: 100%;
-  max-height: 50px;
+.workSection .workHeading {
+  font-size: var(--lrg-font);
+  font-weight: 600;
+  line-height: 30px;
 }
-.workImages .logoLink .brightwheelLogo {
-  width: 100%;
-  max-height: 50px;
+.workSection .workDescription {
+  margin: var(--med-space) 0 var(--lrg-space) 0;
 }
-.workImages .logoLink .view {
-  top: 0;
-  display: none;
-  position: absolute;
-  vertical-align: middle;
-  width: 100%;
-  min-height: 50px;
-  padding: 0 0 0 var(--med-space);
-  color: var(--white);
-  font-size: var(--xlrg-font);
-  line-height: 36px;
-  opacity: 0.9;
-  background-color: var(--black);
+.workSection .projectsList {
+  margin: var(--med-space) 0 0 15px;
 }
 
 .algorithm {

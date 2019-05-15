@@ -4,7 +4,7 @@
   align-items: center;
 
   // Style
-  border: 1px solid var(--black);
+  background-color: var(--blue3);
 
   .projectImage {
     // Size
@@ -25,19 +25,28 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   .logoLink {
     // Position
     flex: 0 1 30%;
     position: relative;
 
-    //Spacing
+    // Spacing
     margin: var(--med-space);
+    padding: var(--med-space);
 
+    // Style
+    border-bottom: 2px solid var(--white);
+
+    &.selected {
+      // Style
+      border-bottom-color: var(--blue2);
+    }
     &:hover {
       // Style
       cursor: pointer;
+      border-bottom-color: var(--blue2);
 
       .view {
         // Position
@@ -50,52 +59,31 @@
       // Position
       display: flex;
       align-items: center;
-
-      // Size
-      height: 50px;
     }
-    .cbsLogo {
+    .logo {
       // Size
       width: 100%;
-      max-height: 50px;
     }
-    .rocketLawyerLogo {
-      // Size
-      width: 100%;
-      max-height: 50px;
-    }
-    .nerdwalletLogo {
-      // Size
-      width: 100%;
-      max-height: 50px;
-    }
-    .brightwheelLogo {
-      // Size
-      width: 100%;
-      max-height: 50px;
-    }
-    .view {
-      // Position
-      top: 0;
-      display: none;
-      position: absolute;
-      vertical-align: middle;
+  }
+}
+.workSection {
+  // Spacing
+  margin: var(--xlrg-space) 0;
+  padding: var(--lrg-space);
 
-      // Size
-      width: 100%;
-      min-height: 50px;
+  // Style
+  background-color: var(--blue3);
 
-      // Spacing
-      padding: 0 0 0 var(--med-space);
-
-      // Font
-      color: var(--white);
-      font-size: var(--xlrg-font);
-      line-height: 36px;
-
-      // Style {
-      opacity: 0.9;
-      background-color: var(--black);
-    }
+  .workHeading {
+    // Font
+    font-size: var(--lrg-font);
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .workDescription {
+    margin: var(--med-space) 0 var(--lrg-space) 0;
+  }
+  .projectsList {
+    margin: var(--med-space) 0 0 15px;
   }
 }
