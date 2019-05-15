@@ -38,7 +38,7 @@ class Algorithm extends React.Component {
 
 const { func, string } = PropTypes;
 Algorithm.propTypes = {
-  solution: string,
+  solution: string.isRequired,
   testRunner: func.isRequired,
   description: string.isRequired
 };

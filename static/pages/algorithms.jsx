@@ -6,6 +6,7 @@ import Algorithm from '../components/algorithm/algorithm';
 import SectionHeader from '../components/sectionHeader/sectionHeader';
 
 // Algorithms
+import * as StringAnagrams from '../js/algorithms/stringAnagrams';
 import * as MissingInteger from '../js/algorithms/missingInteger';
 import * as LargestSmallestInt from '../js/algorithms/largestSmallestInt';
 
@@ -39,6 +40,11 @@ class Algorithms extends React.Component {
         <section className="section">
           <SectionHeader title="String algorithms" innerHeader />
           <section className="section innerSection">
+            <Algorithm
+              solution={StringAnagrams.solutionText}
+              testRunner={StringAnagrams.testSolution}
+              description="How to check if two Strings are anagrams of each other?"
+            />
           </section>
         </section>
         <section className="section">

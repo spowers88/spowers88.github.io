@@ -108,6 +108,9 @@
   border: 1px solid #e6e6e6;
   background-color: var(--white2);
 }
+.algorithm .run:hover {
+  cursor: pointer;
+}
 
 .nav {
   padding: var(--lrg-space) 0;
