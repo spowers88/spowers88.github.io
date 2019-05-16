@@ -67,6 +67,15 @@
       }
     </style>
     <link rel="stylesheet" href="./dist/main.css" type="text/css" />
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/static/js/service-worker.js').then(registration => {
+          console.log('Service Worker registered successfully!')
+        }, (error) => {
+          console.warn('Error in registering service worker', error)
+        });
+      }
+    </script>
   </head>
   <body>
     <div id="app"></div>
