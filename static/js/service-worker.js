@@ -1,16 +1,25 @@
 self.addEventListener('install', (event) => {
-  let CACHE_NAME = 'image-cache';
-  let urlsToCache = [
+  const IMAGE_CACHE_NAME = 'image-cache';
+  const ASSETS_CACHE_NAME = 'assets-cache';
+  let imageUrlsToCache = [
     '/static/img/cbs-logo.png',
     '/static/img/nerdwallet-logo.png',
     '/static/img/brightwheel-logo.svg',
     '/static/img/rocketlawyer-logo.png',
     '/static/img/fullstack-react-native-gumroad.png'
   ];
+  let assetsUrlsToCache = [
+    '/dist/main.css',
+    '/dist/bundle.js'
+  ];
 
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+    caches.open(ASSETS_CACHE_NAME)
+      .then(cache => cache.addAll(assetsUrlsToCache))
+  );
+  event.waitUntil(
+    caches.open(IMAGE_CACHE_NAME)
+      .then(cache => cache.addAll(imageUrlsToCache))
   );
 });
 
