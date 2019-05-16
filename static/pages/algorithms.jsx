@@ -9,6 +9,7 @@ import SectionHeader from '../components/sectionHeader/sectionHeader';
 import * as StringAnagrams from '../js/algorithms/stringAnagrams';
 import * as MissingInteger from '../js/algorithms/missingInteger';
 import * as LargestSmallestInt from '../js/algorithms/largestSmallestInt';
+import * as ReverseLinkedListNoRecursion from '../js/algorithms/reverseLinkedListNoRecursion';
 
 class Algorithms extends React.Component {
   render() {
@@ -50,6 +51,11 @@ class Algorithms extends React.Component {
         <section className="section">
           <SectionHeader title="Linked list algorithms" innerHeader />
           <section className="section innerSection">
+            <Algorithm
+              solution={ReverseLinkedListNoRecursion.solutionText}
+              testRunner={ReverseLinkedListNoRecursion.testSolution}
+              description="How to reverse a singly linked list without recursion?"
+            />
           </section>
         </section>
         <section className="section">
