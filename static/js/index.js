@@ -15,7 +15,7 @@ const App = () => (
     <Navigation/>
     <main>
       <Route path="/" exact component={Home} />
-      <Route path="/algorithms" component={Algorithms} />
+      <Route path="/algorithms.html" component={Algorithms} />
     </main>
   </BrowserRouter>
 );

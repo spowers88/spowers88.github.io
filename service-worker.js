@@ -31,9 +31,6 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  console.log(event.request);
-  console.log('Fetch event for ', event.request.url);
-
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
@@ -42,8 +39,22 @@ self.addEventListener('fetch', (event) => {
           return response;
         }
 
-        console.log('Network request for ', event.request.url);
-        return fetch(event.request);
+        return fetch(event.request)
+          .then((response) => {
+            if (event.request.destination === 'image') {
+              return caches.open(IMAGE_CACHE_NAME)
+              .then(cache => {
+                cache.put(event.request.url, response.clone());
+                return response;
+              });
+            } else if (event.request.destination !== 'image') {
+              return caches.open(ASSETS_CACHE_NAME)
+              .then(cache => {
+                cache.put(event.request.url, response.clone());
+                return response;
+              });
+            }
+          });
       })
   );
 });

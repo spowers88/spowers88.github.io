@@ -9,8 +9,8 @@ class Navigation extends React.Component {
   render() {
     return (
       <nav className="nav">
-        <Link className="navLink" to="/">Home</Link>
-        <Link className="navLink" to="/algorithms">Algorithms</Link>
+        <a className="navLink" href="/">Home</a>
+        <a className="navLink" href="/algorithms.html">Algorithms</a>
       </nav>
     );
   }
