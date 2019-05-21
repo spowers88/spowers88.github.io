@@ -13,7 +13,7 @@ import Navigation from '../components/navigation/navigation';
 const App = () => (
   <BrowserRouter>
     <Navigation/>
-    <main>
+    <main className="main">
       <Route path="/" exact component={Home} />
       <Route path="/algorithms.html" component={Algorithms} />
     </main>
