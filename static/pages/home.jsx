@@ -2,6 +2,10 @@
 import React from 'react';
 import SectionHeader from "../components/sectionHeader/sectionHeader";
 
+// Components
+import WorkLogo from '../components/workLogo/workLogo';
+
+// Styles
 import './home.less';
 
 class Home extends React.Component {
@@ -11,19 +15,13 @@ class Home extends React.Component {
     this.state = {
       selectedWork: undefined
     };
-    this.works = {
-      brightwheel: 'brightwheel',
-      nerdwallet: 'nerdwallet',
-      rocketlawyer: 'rocketlawyer',
-      cbsinteractive: 'cbsinteractive'
-    };
 
     this.selectAWork = this.selectAWork.bind(this);
   }
 
   selectAWork(work) {
     this.setState({
-      selectedWork: this.works[work]
+      selectedWork: work
     });
   }
 
@@ -109,38 +107,10 @@ class Home extends React.Component {
           <SectionHeader title="Work history (recent - oldest)" innerHeader />
           <section className="section innerSection">
             <header className="workImages">
-              <a
-                className={`logoLink ${selectedWork === this.works.brightwheel && 'selected'}`}
-                onClick={() => {this.selectAWork(this.works.brightwheel)}}
-              >
-                <span className="imageWrapper">
-                  <img className="logo" src="/static/img/brightwheel-logo.svg" alt="brightwheel logo" />
-                </span>
-              </a>
-              <a
-                className={`logoLink ${selectedWork === this.works.nerdwallet && 'selected'}`}
-                onClick={() => {this.selectAWork(this.works.nerdwallet)}}
-              >
-                <span className="imageWrapper">
-                  <img className="logo" src="/static/img/nerdwallet-logo.png" alt="nerdwallet logo" />
-                </span>
-              </a>
-              <a
-                className={`logoLink ${selectedWork === this.works.rocketlawyer && 'selected'}`}
-                onClick={() => {this.selectAWork(this.works.rocketlawyer)}}
-              >
-                <span className="imageWrapper">
-                  <img className="logo" src="/static/img/rocketlawyer-logo.png" alt="rocket lawyer logo" />
-                </span>
-              </a>
-              <a
-                className={`logoLink ${selectedWork === this.works.cbsinteractive && 'selected'}`}
-                onClick={() => {this.selectAWork(this.works.cbsinteractive)}}
-              >
-                <span className="imageWrapper">
-                  <img className="logo" src="/static/img/cbs-logo.png" alt="cbs interactive logo" />
-                </span>
-              </a>
+              <WorkLogo selectedWork={selectedWork} work="brightwheel" selectAWork={this.selectAWork} />
+              <WorkLogo selectedWork={selectedWork} work="nerdwallet" selectAWork={this.selectAWork} />
+              <WorkLogo selectedWork={selectedWork} work="rocketlawyer" selectAWork={this.selectAWork} />
+              <WorkLogo selectedWork={selectedWork} work="cbsinteractive" selectAWork={this.selectAWork} />
             </header>
             <section className="workSection">
               {
@@ -171,6 +141,11 @@ class Home extends React.Component {
                   {!selectedWork && 'Please click a logo above to view the details'}
                 </p>
               }
+            </section>
+          </section>
+          <section className="section">
+            <SectionHeader title="Hobbies" innerHeader />
+            <section className="section innerSection">
             </section>
           </section>
         </section>

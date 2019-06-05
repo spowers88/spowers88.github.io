@@ -6,6 +6,7 @@ import Algorithm from '../components/algorithm/algorithm';
 import SectionHeader from '../components/sectionHeader/sectionHeader';
 
 // Algorithms
+import * as TwoSum from '../js/algorithms/twoSum';
 import * as StringAnagrams from '../js/algorithms/stringAnagrams';
 import * as MissingInteger from '../js/algorithms/missingInteger';
 import * as LargestSmallestInt from '../js/algorithms/largestSmallestInt';
@@ -35,6 +36,11 @@ class Algorithms extends React.Component {
               solution={LargestSmallestInt.solutionText}
               testRunner={LargestSmallestInt.testSolution}
               description="How to find the largest and smallest number in an unsorted integer array?"
+            />
+            <Algorithm
+              solution={TwoSum.solutionText}
+              testRunner={TwoSum.testSolution}
+              description="Given an array of integers, return indices of the two numbers such that they add up to a specific target."
             />
           </section>
         </section>

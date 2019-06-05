@@ -19,6 +19,32 @@
   line-height: 24px;
 }
 
+.logoLink {
+  flex: 0 1 30%;
+  position: relative;
+  margin: var(--med-space);
+  padding: var(--med-space);
+  border-bottom: 2px solid var(--white);
+}
+.logoLink.selected {
+  border-bottom-color: var(--blue2);
+}
+.logoLink:hover {
+  cursor: pointer;
+  border-bottom-color: var(--blue2);
+}
+.logoLink:hover .view {
+  display: flex;
+  align-items: center;
+}
+.logoLink .imageWrapper {
+  display: flex;
+  align-items: center;
+}
+.logoLink .logo {
+  width: 100%;
+}
+
 .project {
   display: flex;
   align-items: center;
@@ -39,31 +65,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-}
-.workImages .logoLink {
-  flex: 0 1 30%;
-  position: relative;
-  margin: var(--med-space);
-  padding: var(--med-space);
-  border-bottom: 2px solid var(--white);
-}
-.workImages .logoLink.selected {
-  border-bottom-color: var(--blue2);
-}
-.workImages .logoLink:hover {
-  cursor: pointer;
-  border-bottom-color: var(--blue2);
-}
-.workImages .logoLink:hover .view {
-  display: flex;
-  align-items: center;
-}
-.workImages .logoLink .imageWrapper {
-  display: flex;
-  align-items: center;
-}
-.workImages .logoLink .logo {
-  width: 100%;
 }
 .workSection {
   margin: var(--xlrg-space) 0;
@@ -134,3 +135,5 @@
   text-decoration: underline;
 }
 
+
+/*# sourceMappingURL=main.css.map*/

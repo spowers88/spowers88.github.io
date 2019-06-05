@@ -1,0 +1,38 @@
+.logoLink {
+  // Position
+  flex: 0 1 30%;
+  position: relative;
+
+  // Spacing
+  margin: var(--med-space);
+  padding: var(--med-space);
+
+  // Style
+  border-bottom: 2px solid var(--white);
+
+  &.selected {
+    // Style
+    border-bottom-color: var(--blue2);
+  }
+  &:hover {
+    // Style
+    cursor: pointer;
+    border-bottom-color: var(--blue2);
+
+    .view {
+      // Position
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .imageWrapper {
+    // Position
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    // Size
+    width: 100%;
+  }
+}
